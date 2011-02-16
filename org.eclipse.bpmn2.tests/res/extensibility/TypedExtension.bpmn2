@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn20:definitions targetNamespace="http://www.abc.com"
+	xsi:schemaLocation="http://www.acme.com/bpmn-ext Example-Extension.xsd"
+	xmlns:bpmn20="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmn-ext="http://www.acme.com/bpmn-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<bpmn20:extension mustUnderstand="true"
+		definition="bpmn-ext:newRootElement" />
+	<bpmn20:extension mustUnderstand="true"
+		definition="bpmn-ext:customArtifact" />
+
+	<!-- Extending through subclassing. Example 1 -->
+	<bpmn-ext:newRootElement id="ID_1">
+		<bpmn-ext:customSimpleElement>Text</bpmn-ext:customSimpleElement>
+		<bpmn-ext:customGlobalElement id="ID_2"
+			customAttribute="someAttributeValue">
+			<bpmn-ext:customElement></bpmn-ext:customElement>
+		</bpmn-ext:customGlobalElement>
+	</bpmn-ext:newRootElement>
+
+	<!-- Extending by attaching a custom attribute to an existing type -->
+	<bpmn20:process id="ID_3" name="Some Process"
+		bpmn-ext:customGlobalAttribute="A pluggable attribute">
+
+
+		<!-- Extending by attaching a custom element to an existing type -->
+		<!-- Unfortunate XSD behavior. Inherited attributes must appear before 
+			subclass attributes. So has to be at top -->
+		<bpmn20:extensionElements>
+			<bpmn-ext:customGlobalElement>
+				<bpmn-ext:customElement />
+			</bpmn-ext:customGlobalElement>
+		</bpmn20:extensionElements>
+
+		<bpmn20:task />
+
+		<!-- Extending by subclassing. Example 2 -->
+		<bpmn-ext:customArtifact>
+			<bpmn-ext:customElement>Some element</bpmn-ext:customElement>
+		</bpmn-ext:customArtifact>
+
+	</bpmn20:process>
+
+</bpmn20:definitions>

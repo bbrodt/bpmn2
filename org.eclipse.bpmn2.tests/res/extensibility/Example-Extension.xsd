@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"	
+	xmlns="http://www.acme.com/bpmn-ext"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bpmn20="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	targetNamespace="http://www.acme.com/bpmn-ext">
+	
+	<xsd:import namespace="http://www.omg.org/spec/BPMN/20100524/MODEL" schemaLocation="BPMN20.xsd" />
+
+	<xsd:element name="newRootElement" type="tSubclassExample1" substitutionGroup="bpmn20:rootElement"/>
+	<xsd:complexType name="tSubclassExample1">
+		<xsd:complexContent>
+			<xsd:extension base="bpmn20:tRootElement">
+				<xsd:sequence>
+					<xsd:element name="customSimpleElement" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+					<xsd:element ref="customGlobalElement" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="customAttribute1" type="xsd:string"/>
+				<xsd:attribute name="customAttribute2" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>		
+
+	<xsd:element name="customGlobalElement" type="tAComplexType"/>
+	<xsd:complexType name="tAComplexType">
+		<xsd:complexContent>
+			<xsd:extension base="bpmn20:tBaseElement">
+				<xsd:sequence>
+					<xsd:element name="customElement" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:attribute name="customAttribute" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>		
+
+	<xsd:element name="customArtifact" type="tSubclassExample2" substitutionGroup="bpmn20:artifact"/>
+	<xsd:complexType name="tSubclassExample2">
+		<xsd:complexContent>
+			<xsd:extension base="bpmn20:tArtifact">
+				<xsd:sequence>
+					<xsd:element name="customElement" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:attribute name="customAttribute" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>		
+	
+	<xsd:attribute name="customGlobalAttribute" type="xsd:string"/>
+	
+</xsd:schema>

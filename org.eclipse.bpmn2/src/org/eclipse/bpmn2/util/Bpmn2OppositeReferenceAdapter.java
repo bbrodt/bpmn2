@@ -96,7 +96,8 @@ public class Bpmn2OppositeReferenceAdapter extends ECrossReferenceAdapter {
             throw new IllegalArgumentException("This reference is not observed by this adapter: "
                     + reference.toString());
 
-        EObjectEList<E> result = new EObjectEList<E>(dataClass, owner, opposite.getFeatureID());
+        EObjectEList<E> result = new EObjectEList<E>(dataClass, owner, owner.eClass().getFeatureID(
+                opposite));
 
         for (Setting cur : getNonNavigableInverseReferences(owner, false)) {
             if (cur.getEStructuralFeature().equals(reference))

@@ -135,6 +135,7 @@ public class ExtensibilityTests extends Bpmn2SerializationTest {
     }
 
     @Test
+    // This tests currently raises an ERROR - since commit 640ecc... (never succeeded) [HH, 2011-03-16]
     public void testExternalTypedExtension() {
         // Tests an external file if the extension attributes can be read correctly.
         Resource res = TestHelper.getResource(URI.createFileURI(new File(

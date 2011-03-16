@@ -11,6 +11,7 @@
 package org.eclipse.bpmn2.util;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,7 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature.Setting;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.BasicInternalEList;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
 import org.eclipse.emf.ecore.util.EObjectEList;
 
@@ -96,8 +98,7 @@ public class Bpmn2OppositeReferenceAdapter extends ECrossReferenceAdapter {
             throw new IllegalArgumentException("This reference is not observed by this adapter: "
                     + reference.toString());
 
-        EObjectEList<E> result = new EObjectEList<E>(dataClass, owner, owner.eClass().getFeatureID(
-                opposite));
+        List<E> result = new BasicInternalEList<E>(dataClass);
 
         for (Setting cur : getNonNavigableInverseReferences(owner, false)) {
             if (cur.getEStructuralFeature().equals(reference))

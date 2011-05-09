@@ -14,8 +14,6 @@
  */
 package org.eclipse.bpmn2;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Input Output Binding</b></em>'.
@@ -34,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='tInputOutputBinding' kind='elementOnly'"
  * @generated
  */
-public interface InputOutputBinding extends EObject {
+public interface InputOutputBinding extends BaseElement {
     /**
      * Returns the value of the '<em><b>Input Data Ref</b></em>' reference.
      * <!-- begin-user-doc -->

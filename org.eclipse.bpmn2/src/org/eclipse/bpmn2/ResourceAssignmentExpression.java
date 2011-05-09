@@ -14,8 +14,6 @@
  */
 package org.eclipse.bpmn2;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Resource Assignment Expression</b></em>'.
@@ -32,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='tResourceAssignmentExpression' kind='elementOnly'"
  * @generated
  */
-public interface ResourceAssignmentExpression extends EObject {
+public interface ResourceAssignmentExpression extends BaseElement {
     /**
      * Returns the value of the '<em><b>Expression</b></em>' containment reference.
      * <!-- begin-user-doc -->

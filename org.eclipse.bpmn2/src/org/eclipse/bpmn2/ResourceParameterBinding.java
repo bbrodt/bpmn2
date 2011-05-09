@@ -14,8 +14,6 @@
  */
 package org.eclipse.bpmn2;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Resource Parameter Binding</b></em>'.
@@ -33,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='tResourceParameterBinding' kind='elementOnly'"
  * @generated
  */
-public interface ResourceParameterBinding extends EObject {
+public interface ResourceParameterBinding extends BaseElement {
     /**
      * Returns the value of the '<em><b>Expression</b></em>' containment reference.
      * <!-- begin-user-doc -->

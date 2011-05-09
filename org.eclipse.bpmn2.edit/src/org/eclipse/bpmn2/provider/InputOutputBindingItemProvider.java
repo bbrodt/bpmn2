@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.InputOutputBinding;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -37,7 +38,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InputOutputBindingItemProvider extends ItemProviderAdapter implements
+public class InputOutputBindingItemProvider extends BaseElementItemProvider implements
         IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
         IItemLabelProvider, IItemPropertySource {
     /**
@@ -147,7 +148,9 @@ public class InputOutputBindingItemProvider extends ItemProviderAdapter implemen
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_InputOutputBinding_type");
+        String label = ((InputOutputBinding) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_InputOutputBinding_type")
+                : getString("_UI_InputOutputBinding_type") + " " + label;
     }
 
     /**
@@ -173,17 +176,6 @@ public class InputOutputBindingItemProvider extends ItemProviderAdapter implemen
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-    }
-
-    /**
-     * Return the resource locator for this item provider's resources.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public ResourceLocator getResourceLocator() {
-        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

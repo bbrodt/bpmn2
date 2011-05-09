@@ -40,7 +40,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceAssignmentExpressionItemProvider extends ItemProviderAdapter implements
+public class ResourceAssignmentExpressionItemProvider extends BaseElementItemProvider implements
         IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
         IItemLabelProvider, IItemPropertySource {
     /**
@@ -123,7 +123,9 @@ public class ResourceAssignmentExpressionItemProvider extends ItemProviderAdapte
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_ResourceAssignmentExpression_type");
+        String label = ((ResourceAssignmentExpression) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ResourceAssignmentExpression_type")
+                : getString("_UI_ResourceAssignmentExpression_type") + " " + label;
     }
 
     /**
@@ -164,17 +166,6 @@ public class ResourceAssignmentExpressionItemProvider extends ItemProviderAdapte
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
                 Bpmn2Factory.eINSTANCE.createFormalExpression()));
-    }
-
-    /**
-     * Return the resource locator for this item provider's resources.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public ResourceLocator getResourceLocator() {
-        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

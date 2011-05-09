@@ -19,7 +19,6 @@ import org.eclipse.bpmn2.ParticipantMultiplicity;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ParticipantMultiplicityImpl extends EObjectImpl implements ParticipantMultiplicity {
+public class ParticipantMultiplicityImpl extends BaseElementImpl implements ParticipantMultiplicity {
     /**
      * The default value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
      * <!-- begin-user-doc -->

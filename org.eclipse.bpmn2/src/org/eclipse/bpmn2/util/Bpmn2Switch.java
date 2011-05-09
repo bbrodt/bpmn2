@@ -837,6 +837,10 @@ public class Bpmn2Switch<T> {
             Escalation escalation = (Escalation) theEObject;
             T result = caseEscalation(escalation);
             if (result == null)
+                result = caseRootElement(escalation);
+            if (result == null)
+                result = caseBaseElement(escalation);
+            if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
@@ -1171,6 +1175,8 @@ public class Bpmn2Switch<T> {
             InputOutputBinding inputOutputBinding = (InputOutputBinding) theEObject;
             T result = caseInputOutputBinding(inputOutputBinding);
             if (result == null)
+                result = caseBaseElement(inputOutputBinding);
+            if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
@@ -1446,6 +1452,8 @@ public class Bpmn2Switch<T> {
             ParticipantMultiplicity participantMultiplicity = (ParticipantMultiplicity) theEObject;
             T result = caseParticipantMultiplicity(participantMultiplicity);
             if (result == null)
+                result = caseBaseElement(participantMultiplicity);
+            if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
@@ -1575,6 +1583,8 @@ public class Bpmn2Switch<T> {
             ResourceAssignmentExpression resourceAssignmentExpression = (ResourceAssignmentExpression) theEObject;
             T result = caseResourceAssignmentExpression(resourceAssignmentExpression);
             if (result == null)
+                result = caseBaseElement(resourceAssignmentExpression);
+            if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
@@ -1590,6 +1600,8 @@ public class Bpmn2Switch<T> {
         case Bpmn2Package.RESOURCE_PARAMETER_BINDING: {
             ResourceParameterBinding resourceParameterBinding = (ResourceParameterBinding) theEObject;
             T result = caseResourceParameterBinding(resourceParameterBinding);
+            if (result == null)
+                result = caseBaseElement(resourceParameterBinding);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;

@@ -682,6 +682,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
+                        Bpmn2Factory.eINSTANCE.createEscalation())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
                         Bpmn2Factory.eINSTANCE.createEscalationEventDefinition())));
 
         newChildDescriptors.add(createChildParameter(
@@ -768,6 +773,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
                         Bpmn2Factory.eINSTANCE.createInclusiveGateway())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
+                        Bpmn2Factory.eINSTANCE.createInputOutputBinding())));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
@@ -877,6 +887,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
+                        Bpmn2Factory.eINSTANCE.createParticipantMultiplicity())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
                         Bpmn2Factory.eINSTANCE.createPartnerEntity())));
 
         newChildDescriptors.add(createChildParameter(
@@ -922,7 +937,17 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
+                        Bpmn2Factory.eINSTANCE.createResourceAssignmentExpression())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
                         Bpmn2Factory.eINSTANCE.createResourceParameter())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT,
+                        Bpmn2Factory.eINSTANCE.createResourceParameterBinding())));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
@@ -1232,6 +1257,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
+                        Bpmn2Factory.eINSTANCE.createEscalation())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
                         Bpmn2Factory.eINSTANCE.createEscalationEventDefinition())));
 
         newChildDescriptors.add(createChildParameter(
@@ -1318,6 +1348,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
                         Bpmn2Factory.eINSTANCE.createInclusiveGateway())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
+                        Bpmn2Factory.eINSTANCE.createInputOutputBinding())));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
@@ -1427,6 +1462,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
+                        Bpmn2Factory.eINSTANCE.createParticipantMultiplicity())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
                         Bpmn2Factory.eINSTANCE.createPartnerEntity())));
 
         newChildDescriptors.add(createChildParameter(
@@ -1472,7 +1512,17 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
+                        Bpmn2Factory.eINSTANCE.createResourceAssignmentExpression())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
                         Bpmn2Factory.eINSTANCE.createResourceParameter())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__BASE_ELEMENT_WITH_MIXED_CONTENT,
+                        Bpmn2Factory.eINSTANCE.createResourceParameterBinding())));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
@@ -1728,6 +1778,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
                         Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT,
                         Bpmn2Factory.eINSTANCE.createErrorEventDefinition())));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
+                        Bpmn2Package.Literals.DOCUMENT_ROOT__ROOT_ELEMENT,
+                        Bpmn2Factory.eINSTANCE.createEscalation())));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, FeatureMapUtil.createEntry(
@@ -4237,6 +4292,7 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__END_POINT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ERROR_EVENT_DEFINITION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXPRESSION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__FORMAL_EXPRESSION
@@ -4250,6 +4306,7 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ROLE
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PERFORMER
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__HUMAN_PERFORMER
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_SPECIFICATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INPUT_SET
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__INTERFACE
@@ -4268,6 +4325,7 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__OUTPUT_SET
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_ASSOCIATION
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ENTITY
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTNER_ROLE
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__POTENTIAL_OWNER
@@ -4276,21 +4334,18 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RELATIONSHIP
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RENDERING
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER
+                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SIGNAL_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__STANDARD_LOOP_CHARACTERISTICS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__SUB_CONVERSATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TERMINATE_EVENT_DEFINITION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__TIMER_EVENT_DEFINITION
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__ESCALATION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__EXTENSION_ELEMENTS
                 || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IMPORT
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__IO_BINDING
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__PARTICIPANT_MULTIPLICITY
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_ASSIGNMENT_EXPRESSION
-                || childFeature == Bpmn2Package.Literals.DOCUMENT_ROOT__RESOURCE_PARAMETER_BINDING
                 || childFeature == BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM
                 || childFeature == DiPackage.Literals.DOCUMENT_ROOT__DIAGRAM
                 || childFeature == BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE

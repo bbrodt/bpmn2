@@ -356,6 +356,9 @@ public class LaneItemProvider extends BaseElementItemProvider implements
                 Bpmn2Factory.eINSTANCE.createErrorEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createEscalation()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
@@ -408,6 +411,9 @@ public class LaneItemProvider extends BaseElementItemProvider implements
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createInclusiveGateway()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createInputOutputBinding()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
@@ -473,6 +479,9 @@ public class LaneItemProvider extends BaseElementItemProvider implements
                 Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createParticipantMultiplicity()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createPartnerEntity()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
@@ -500,7 +509,13 @@ public class LaneItemProvider extends BaseElementItemProvider implements
                 Bpmn2Factory.eINSTANCE.createResource()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createResourceAssignmentExpression()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createResourceParameter()));
+
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+                Bpmn2Factory.eINSTANCE.createResourceParameterBinding()));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
                 Bpmn2Factory.eINSTANCE.createScriptTask()));

@@ -34,7 +34,7 @@ public class Bpmn2XMLProcessor extends XMLProcessor {
      * Public constructor to instantiate the helper.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public Bpmn2XMLProcessor() {
         super((EPackage.Registry.INSTANCE));

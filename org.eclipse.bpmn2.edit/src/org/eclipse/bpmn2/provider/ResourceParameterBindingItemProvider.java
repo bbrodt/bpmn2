@@ -41,7 +41,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceParameterBindingItemProvider extends ItemProviderAdapter implements
+public class ResourceParameterBindingItemProvider extends BaseElementItemProvider implements
         IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
         IItemLabelProvider, IItemPropertySource {
     /**
@@ -143,7 +143,9 @@ public class ResourceParameterBindingItemProvider extends ItemProviderAdapter im
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_ResourceParameterBinding_type");
+        String label = ((ResourceParameterBinding) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ResourceParameterBinding_type")
+                : getString("_UI_ResourceParameterBinding_type") + " " + label;
     }
 
     /**
@@ -184,17 +186,6 @@ public class ResourceParameterBindingItemProvider extends ItemProviderAdapter im
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__EXPRESSION,
                 Bpmn2Factory.eINSTANCE.createFormalExpression()));
-    }
-
-    /**
-     * Return the resource locator for this item provider's resources.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public ResourceLocator getResourceLocator() {
-        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

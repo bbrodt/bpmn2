@@ -23,7 +23,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +39,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBinding {
+public class InputOutputBindingImpl extends BaseElementImpl implements InputOutputBinding {
     /**
      * The cached value of the '{@link #getInputDataRef() <em>Input Data Ref</em>}' reference.
      * <!-- begin-user-doc -->

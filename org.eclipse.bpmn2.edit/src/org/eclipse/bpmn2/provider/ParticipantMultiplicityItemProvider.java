@@ -40,7 +40,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter implements
+public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider implements
         IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
         IItemLabelProvider, IItemPropertySource {
     /**
@@ -131,9 +131,9 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
      */
     @Override
     public String getText(Object object) {
-        ParticipantMultiplicity participantMultiplicity = (ParticipantMultiplicity) object;
-        return getString("_UI_ParticipantMultiplicity_type") + " "
-                + participantMultiplicity.getMaximum();
+        String label = ((ParticipantMultiplicity) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ParticipantMultiplicity_type")
+                : getString("_UI_ParticipantMultiplicity_type") + " " + label;
     }
 
     /**
@@ -167,17 +167,6 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter imp
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-    }
-
-    /**
-     * Return the resource locator for this item provider's resources.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public ResourceLocator getResourceLocator() {
-        return Bpmn2EditPlugin.INSTANCE;
     }
 
 }

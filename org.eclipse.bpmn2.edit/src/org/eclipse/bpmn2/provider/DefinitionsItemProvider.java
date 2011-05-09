@@ -333,6 +333,10 @@ public class DefinitionsItemProvider extends BaseElementItemProvider implements
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
+                Bpmn2Factory.eINSTANCE.createEscalation()));
+
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS,
                 Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
 
         newChildDescriptors.add(createChildParameter(

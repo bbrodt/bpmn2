@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://eclipse.org/bpmn2">
+	BPMN2 Metamodel
+   </description>
+
+   <category-def name="Eclipse bpmn2 (Incubation)" label="Eclipse bpmn2 (Incubation)">
+      <description>
+         Eclipse bpmn2 (Incubation)
+      </description>
+   </category-def>
+
+   <feature url="org.eclipse.bpmn2.feature_0.0.0.qualifier.jar" id="org.eclipse.bpmn2.feature" version="0.0.0">
+      <category name="Eclipse bpmn2 (Incubation)"/>
+   </feature>
+   
+</site>
